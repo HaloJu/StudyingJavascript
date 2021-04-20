@@ -1,9 +1,9 @@
-// 1. USe strict
+// 1. Use strict
 // added in ES 5
 // use this for Vanila Javascript.
 'use strict';
 
-//2.Variable
+//2.Variable rw(read/write)
 // let(added in ES6)
 let globalName = 'global name';
 {
@@ -26,13 +26,21 @@ console.log(globalName)
 }
 console.log(age);
 
-//3. Constants
+
+//3. Constant, r(read only)
+//use const whenever possible.
+//only use let if variable needs to change.   
+const dayInWeek = 7;
+const maxNumber = 5;
+
+//Note!
+//Immutable data types: premitive types, frozen objects (i.e. objects.freeze())
+//Mutable data types: all objects by default are mutable in JS
 //favor immutable data type always for a few reason:
 //-security
 //-thread safety
 //-reduce human mistake 
-const dayInWeek = 7;
-const maxNumber = 5;
+
 
 //4. Variable types
 
@@ -94,6 +102,10 @@ const gSymbol2 = Symbol.for('id');
 console.log(gSymbol1 === gSymbol2);
 console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`)
 
+//object, real-life object, data structure
+const ju = { name: 'ju', age: 20 };
+ellie.age = 26;
+
 // 5. Dynamic typing : dynamically typed langyage
 let text = 'hello'; //text type = string
 console.log(text.charAt(0)); // h
@@ -105,3 +117,5 @@ console.log(`value: ${text}, type: ${typeof text}`);
 text = '8' / '2'; // string/string => number 
 console.log(`value: ${text}, type: ${typeof text}`);
 console.log(text.charAt(0));
+
+
