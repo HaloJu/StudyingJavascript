@@ -99,14 +99,119 @@ console.log(ellie1 === ellie2);
 console.log(ellie1 === ellie3);
 
 //equality - puzzler
+console.log('puzzler')
 console.log(0 == false);
-console.log(0 === false);
+console.log(`${0 === false} A type:${typeof 0} and B type: ${typeof false}`);
 console.log('' == false);
-console.log('' === false);
+console.log(`${'' === false}  A type:${typeof ''} and B type: ${typeof false}`);
 console.log(null == undefined);
-console.log(null === undefined);
+console.log(`${null === undefined} A type:${typeof null} and B type: ${typeof undefined}`);
 
 
 
+// 8. Conditional operators: if
+// if, else if, else
+const name = 'ellie';
+if (name === 'ellie') {
+    console.log('Welcome, Ellie!');
+} else if (name === 'coder') {
+    console.log('You are amazing coder');
+} else {
+    console.log('unknwon');
+}
 
 
+// 9. Ternary operator: ?
+// condition ? value1 : value2 
+
+console.log(name === 'ellie' ? 'yes' : 'no');
+
+
+// 10.Switch statement
+//use for multiple if checks
+//use for enum-like value check
+//use for multilpe type checks in TS
+const browser = 'IE';
+switch (browser) {
+    case 'IE':
+        console.log('go away!');
+        break;
+    case 'Chrome':
+        console.log('love you!');
+        break;
+    case 'Firefox':
+        console.log('love you!');
+        break;
+    default:
+        console.log('same all!');
+        break;
+}
+
+
+// 11. Loops
+// while loop, while the condittion is truthy,
+//body code is excuted.
+let i = 3;
+while (i > 0) {
+    console.log(`while: ${i}`);
+    i--;
+}
+
+
+//do while loop, body code is excuted first,
+//then check the condition.
+do {
+    console.log(`do while: ${i}`);
+    i--;
+} while (i > 0);
+
+
+// //for loop, for(begin; condition; step)
+// for (i = 3; i > 0; i--) {
+//     console.log(`for: ${i}`);
+// }
+
+// for (let i = 3; i > 0; i = i - 2) {
+//     //inline variable declaration
+//     console.log(`inline variable for: ${i}`)
+// }
+
+
+// //nested loops
+// for (let i = 0; i < 10; i++) {
+//     for (let j = 0; j < 10; j++) {
+//         console.log(`i: ${i}, j: ${j}`);
+//     }
+// }
+
+
+// break, continue
+//Q1. iterate from 0 to 10 and print only even numbers(use continue)
+//Q2. iterate from 0 to 10 and print numbers until reaching 8 (use break)
+
+
+// //Q1. my code
+// for (let i = 0; i <= 10; i++) {
+//     if ((i % 2) > 0) {
+//         continue
+//     }
+//     console.log(`evennumber: ${i}`);
+// }
+
+//Q1. Ellie's code
+for (let i = 0; i < 11; i++) {
+    if (i % 2 === 0) {
+        continue;
+    }
+    console.log(`q1. ${i}`);
+}
+
+
+
+// //Q2.
+// for (let i = 0; i <= 10; i++) {
+//     if (i > 8) {
+//         break
+//     }
+//     console.log(`numbers until 8: ${i}`);
+// }
