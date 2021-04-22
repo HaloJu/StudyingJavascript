@@ -208,10 +208,20 @@ for (let i = 0; i < 11; i++) {
 
 
 
-// //Q2.
-// for (let i = 0; i <= 10; i++) {
-//     if (i > 8) {
-//         break
-//     }
-//     console.log(`numbers until 8: ${i}`);
-// }
+//Q2. my code
+for (let i = 0; i <= 10; i++) {
+    if (i > 8) {
+        break
+    }
+    console.log(`numbers until 8: ${i}`);
+}
+
+//Q2. Ellie's code
+for (let i = 0; i < 11; i++) {
+    if (i > 8) {
+        break;
+    }
+    console.log(`q2. ${i}`);
+}
+
+
