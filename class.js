@@ -73,7 +73,7 @@ class Article {
     }
 
     static printPublisher() {
-        console.log) (Article.publisher);
+        console.log(Article.publisher);
     }
 }
 
@@ -84,6 +84,8 @@ const article2 = new Article(2);
 
 // 5. Inheritance
 // a way for one class to extend another class.
+
+//( Shape = parent class )
 class Shape {
     constructor(width, height, color) {
         this.width = width;
@@ -100,14 +102,15 @@ class Shape {
     }
 }
 
+// ( Rectangle, Triangle = Child class )
 class Rectangle extends Shape { }
 class Triangle extends Shape {
     draw() {
-        super.draw();
-        console.log('🔺');
+        super.draw();           //The super keyword is used to access and call functions on an object's parent.
+        console.log('🔺');      //Overriding
     }
     getArea() {
-        return (this.width * this.height) / 2;
+        return (this.width * this.height) / 2;  //Overriding
     }
     toString() {
         return `Triangle: color: ${this.color}`;
@@ -116,9 +119,20 @@ class Triangle extends Shape {
 
 const rectangle = new Rectangle(20, 20, 'blue');
 rectangle.draw();
-console.log(ractangle.getArea());
+console.log(rectangle.getArea());
 
 const triangle = new Triangle(20, 20, 'red');
 triangle.draw();
 console.log(triangle.getArea());
+
+
+
+// 6. Class checking: instanceOf
+
+console.log(rectangle instanceof Rectangle);
+console.log(triangle instanceof Rectangle);
+console.log(triangle instanceof Triangle);
+console.log(triangle instanceof Shape);
+console.log(triangle instanceof Object);
+console.log(triangle.toString());
 
