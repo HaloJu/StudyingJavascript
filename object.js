@@ -103,14 +103,6 @@ const user2 = user;
 //user2.name = 'coder';
 console.log(user);
 
-// old way
-const user3 = {};
-for (let key in user) {
-    user3[key] = user[key];
-}
-console.clear();
-console.log(user3);
-
 const user4 = Object.assign({}, user);
 console.log(user4);
 
@@ -120,3 +112,12 @@ const fruit2 = { color: 'blue', size: 'big' };
 const mixed = Object.assign({}, fruit1, fruit2);
 console.log(mixed.color);
 console.log(mixed.size);
+
+
+// cf) old way
+const user3 = {};
+for (let key in user) {
+    user3[key] = user[key];
+}
+console.clear();
+console.log(user3);
