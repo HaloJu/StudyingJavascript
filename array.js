@@ -39,5 +39,64 @@ for (let fruit of fruits) {
     console.log(fruit);
 }
 
+console.clear();
 // c. forEach
 fruits.forEach((fruit) => console.log(fruit));
+
+console.clear();
+
+// 4. Addition, deletion, copy
+console.log(fruits);
+
+// push : add an item to the end
+fruits.push('🍉', '🍒');
+console.log(fruits);
+
+// pop: remove an item the end
+fruits.pop();
+console.log(fruits);
+
+// unshift: add an item to the beginning
+fruits.unshift('🍍', '🍈');
+console.log(fruits);
+
+// shift: remove an item to the beginning
+fruits.shift();
+console.log(fruits);
+
+
+// note!! shift, unshift are slower than pop, push
+
+console.clear();
+// splice: remove an item by index position
+fruits.push('🥝', '🍇', '🥭');
+console.log(fruits);
+fruits.splice(1, 1)
+console.log(fruits);
+fruits.splice(1, 1, '🍏', '🥑');
+console.log(fruits);
+
+// combine two arrays
+const vegetable = ['🍄', '🥕'];
+const newFresh = fruits.concat(vegetable);
+console.log(newFresh);
+
+
+// 5. Searching
+// find the index
+console.clear();
+console.log(fruits);
+console.log(fruits.indexOf('🍈'));
+console.log(fruits.indexOf('🍉'));
+console.log(fruits.indexOf('🥥'));
+
+// includes
+console.log(fruits.includes('🍉'));
+console.log(fruits.includes('🥥'));
+
+// lastIndexOf
+console.clear();
+fruits.push('🍉');
+console.log(fruits);
+console.log(fruits.indexOf('🍉'));
+console.log(fruits.lastIndexOf('🥥'));
