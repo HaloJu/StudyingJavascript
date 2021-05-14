@@ -53,6 +53,7 @@ fruits.push('🍉', '🍒');
 console.log(fruits);
 
 // pop: remove an item the end
+const poped = fruits.pop();
 fruits.pop();
 console.log(fruits);
 
@@ -100,3 +101,17 @@ fruits.push('🍉');
 console.log(fruits);
 console.log(fruits.indexOf('🍉'));
 console.log(fruits.lastIndexOf('🥥'));
+
+console.clear();
+
+
+// my Check
+const foods = ['🍕', '🍔', '🍟'];
+const pushed = foods.push('🧀', '🍙');
+console.log(pushed); // 5
+console.log(foods); // (5) ["🍕", "🍔", "🍟", "🧀", "🍙"]
+
+const love = ['🧡', '💛', '💙', '💕'];
+const lovepoped = love.pop();
+console.log(lovepoped); // 💕
+console.log(love); // (3) ["🧡", "💛", "💙"]
